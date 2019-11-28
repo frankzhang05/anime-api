@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anime API Example</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="discoverDiv">
+        <h1>Discover new anime!</h1>
+    </div>
+
+    <div id="queryDiv">
+        <h1>Find a series!</h1>
+        <form id="queryForm" method="get">
+            <label for="queryString">Search for: </label>
+            <input id="queryString" name="queryString" type="text">
+            <br />
+
+            <label>Select a site: </label>
+            <input id="queryB" name="querySite" value="bilibili" type="radio" checked>
+            <label for="queryB">Bilibili</label>
+            <input id="queryN" name="querySite" value="niconico" type="radio">
+            <label for="queryN">Niconico</label>
+            <input id="queryMAL" name="querySite" value="mal" type="radio">
+            <label for="queryMAL">MyAnimeList</label>
+            <input id="queryAL" name="querySite" value="al" type="radio">
+            <label for="queryAL">AniList</label>
+            <br />
+
+            <button id="querySubmit" type="button" onClick="formSubmitted()">Submit!</button>
+        </form>
+    </div>
+
+    <div id="queryIFrameDiv" style="display: none">
+        <iframe id="queryIFrame"></iframe>
+    </div>
+
+    <div id="queryTableDiv" style="display: none">
+        <h1 id="queryTableError">No Data Found.</h1>
+        <table id="queryTable">
+            <tr id="queryTableRow1">
+                <td id="queryTableItem1">
+                    <img src="" alt="" id="queryTableThumb1">
+                    <p id="queryTableTitle1"></p>
+                    <p id="queryTableTime1"></p>
+                </td>
+                <td id="queryTableItem2">
+                    <img src="" alt="" id="queryTableThumb2">
+                    <p id="queryTableTitle2"></p>
+                    <p id="queryTableTime2"></p>
+                </td>
+            </tr>
+            <tr id="queryTableRow2">
+                <td id="queryTableItem3">
+                    <img src="" alt="" id="queryTableThumb3">
+                    <p id="queryTableTitle3"></p>
+                    <p id="queryTableTime3"></p>
+                </td>
+                <td id="queryTableItem4">
+                    <img src="" alt="" id="queryTableThumb4">
+                    <p id="queryTableTitle4"></p>
+                    <p id="queryTableTime4"></p>
+                </td>
+            </tr>
+            <tr id="queryTableRow3">
+                <td id="queryTableItem5">
+                    <img src="" alt="" id="queryTableThumb5">
+                    <p id="queryTableTitle5"></p>
+                    <p id="queryTableTime5"></p>
+                </td>
+                <td id="queryTableItem6">
+                    <img src="" alt="" id="queryTableThumb6">
+                    <p id="queryTableTitle6"></p>
+                    <p id="queryTableTime6"></p>
+                </td>
+            </tr>
+            <tr id="queryTableRow4">
+                <td id="queryTableItem7">
+                    <img src="" alt="" id="queryTableThumb7">
+                    <p id="queryTableTitle7"></p>
+                    <p id="queryTableTime7"></p>
+                </td>
+                <td id="queryTableItem8">
+                    <img src="" alt="" id="queryTableThumb8">
+                    <p id="queryTableTitle8"></p>
+                    <p id="queryTableTime8"></p>
+                </td>
+            </tr>
+            <tr id="queryTableRow5">
+                <td id="queryTableItem9">
+                    <img src="" alt="" id="queryTableThumb9">
+                    <p id="queryTableTitle9"></p>
+                    <p id="queryTableTime9"></p>
+                </td>
+                <td id="queryTableItem10">
+                    <img src="" alt="" id="queryTableThumb10">
+                    <p id="queryTableTitle10"></p>
+                    <p id="queryTableTime10"></p>
+                </td>
+            </tr>
+        </table>
+        <button id="nicoLink" type="button" onClick="nicoSeeMore()">See more on Niconico!</button>
+    </div>
+
+    <div id="newsDiv">
+        <h1>Check out the latest news!</h1>
+    </div>
+</body>
+</html>
