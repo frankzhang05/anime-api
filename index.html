@@ -18,13 +18,13 @@
             <br />
 
             <label>Select a site: </label>
-            <input id="queryB" name="querySite" value="bilibili" type="radio" checked>
+            <input id="queryB" name="querySite" value="bilibili" type="radio" checked onclick="clearResults()">
             <label for="queryB">Bilibili</label>
-            <input id="queryN" name="querySite" value="niconico" type="radio">
+            <input id="queryN" name="querySite" value="niconico" type="radio" onclick="clearResults()">
             <label for="queryN">Niconico</label>
-            <input id="queryMAL" name="querySite" value="mal" type="radio">
+            <input id="queryMAL" name="querySite" value="mal" type="radio" onclick="clearResults()">
             <label for="queryMAL">MyAnimeList</label>
-            <input id="queryAL" name="querySite" value="al" type="radio">
+            <input id="queryAL" name="querySite" value="al" type="radio" onclick="clearResults()">
             <label for="queryAL">AniList</label>
             <br />
 
@@ -36,71 +36,73 @@
         <iframe id="queryIFrame"></iframe>
     </div>
 
+    <h1 id="queryTableError" style="display: none">No Data Found.</h1>
+
     <div id="queryTableDiv" style="display: none">
-        <h1 id="queryTableError">No Data Found.</h1>
         <table id="queryTable">
             <tr id="queryTableRow1">
                 <td id="queryTableItem1">
-                    <img src="" alt="" id="queryTableThumb1">
-                    <p id="queryTableTitle1"></p>
+                    <a id="queryTableThumbLink1" target="_blank"><img src="" alt="" id="queryTableThumb1"></a>
+                    <a id="queryTableTitle1" target="_blank"></a>
                     <p id="queryTableTime1"></p>
                 </td>
                 <td id="queryTableItem2">
-                    <img src="" alt="" id="queryTableThumb2">
-                    <p id="queryTableTitle2"></p>
+                    <a id="queryTableThumbLink2" target="_blank"><img src="" alt="" id="queryTableThumb2"></a>
+                    <a id="queryTableTitle2" target="_blank"></a>
                     <p id="queryTableTime2"></p>
                 </td>
             </tr>
             <tr id="queryTableRow2">
                 <td id="queryTableItem3">
-                    <img src="" alt="" id="queryTableThumb3">
-                    <p id="queryTableTitle3"></p>
+                    <a id="queryTableThumbLink3" target="_blank"><img src="" alt="" id="queryTableThumb3"></a>
+                    <a id="queryTableTitle3" target="_blank"></a>
                     <p id="queryTableTime3"></p>
                 </td>
                 <td id="queryTableItem4">
-                    <img src="" alt="" id="queryTableThumb4">
-                    <p id="queryTableTitle4"></p>
+                    <a id="queryTableThumbLink4" target="_blank"><img src="" alt="" id="queryTableThumb4"></a>
+                    <a id="queryTableTitle4" target="_blank"></a>
                     <p id="queryTableTime4"></p>
                 </td>
             </tr>
             <tr id="queryTableRow3">
                 <td id="queryTableItem5">
-                    <img src="" alt="" id="queryTableThumb5">
-                    <p id="queryTableTitle5"></p>
+                    <a id="queryTableThumbLink5" target="_blank"><img src="" alt="" id="queryTableThumb5"></a>
+                    <a id="queryTableTitle5" target="_blank"></a>
                     <p id="queryTableTime5"></p>
                 </td>
                 <td id="queryTableItem6">
-                    <img src="" alt="" id="queryTableThumb6">
-                    <p id="queryTableTitle6"></p>
+                    <a id="queryTableThumbLink6" target="_blank"><img src="" alt="" id="queryTableThumb6"></a>
+                    <a id="queryTableTitle6" target="_blank"></a>
                     <p id="queryTableTime6"></p>
                 </td>
             </tr>
             <tr id="queryTableRow4">
                 <td id="queryTableItem7">
-                    <img src="" alt="" id="queryTableThumb7">
-                    <p id="queryTableTitle7"></p>
+                    <a id="queryTableThumbLink7" target="_blank"><img src="" alt="" id="queryTableThumb7"></a>
+                    <a id="queryTableTitle7" target="_blank"></a>
                     <p id="queryTableTime7"></p>
                 </td>
                 <td id="queryTableItem8">
-                    <img src="" alt="" id="queryTableThumb8">
-                    <p id="queryTableTitle8"></p>
+                    <a id="queryTableThumbLink8" target="_blank"><img src="" alt="" id="queryTableThumb8"></a>
+                    <a id="queryTableTitle8" target="_blank"></a>
                     <p id="queryTableTime8"></p>
                 </td>
             </tr>
             <tr id="queryTableRow5">
                 <td id="queryTableItem9">
-                    <img src="" alt="" id="queryTableThumb9">
-                    <p id="queryTableTitle9"></p>
+                    <a id="queryTableThumbLink9" target="_blank"><img src="" alt="" id="queryTableThumb9"></a>
+                    <a id="queryTableTitle9" target="_blank"></a>
                     <p id="queryTableTime9"></p>
                 </td>
                 <td id="queryTableItem10">
-                    <img src="" alt="" id="queryTableThumb10">
-                    <p id="queryTableTitle10"></p>
+                    <a id="queryTableThumbLink10" target="_blank"><img src="" alt="" id="queryTableThumb10"></a>
+                    <a id="queryTableTitle10" target="_blank"></a>
                     <p id="queryTableTime10"></p>
                 </td>
             </tr>
         </table>
-        <button id="nicoLink" type="button" onClick="nicoSeeMore()">See more on Niconico!</button>
+        <button id="nicoLink" type="button" onClick="nicoSeeMore()" style="display: none">See more on Niconico!</button>
+        <button id="malLink" type="button" onClick="malSeeMore()" style="display: none">See more on MAL!</button>
     </div>
 
     <div id="newsDiv">
